@@ -15,7 +15,7 @@ func main() {
 func handler(rw http.ResponseWriter, req *http.Request) {
 
 	var url string
-	url = "http://dev-d8go.pantheon.io/d8go/node/" + req.URL.Path[1:] + "?_format=json"
+	url = "http://dev-go.pantheon.io/node/" + req.URL.Path[1:] + "?_format=json"
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", url, nil)
 	req.Header.Set("Accept", "application/json")
